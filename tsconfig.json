@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    /* ---------- File Layout ---------- */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* ---------- Language & Module ---------- */
+    "target": "ES2020",                // Modern JS, but stable for Node
+    "module": "commonjs",              // Works best with ts-node-dev
+    "moduleResolution": "node",        // Classic Node-style resolution
+
+    /* ---------- Node Support ---------- */
+    "lib": ["ES2020"],                 // Include modern JS APIs
+    "types": ["node"],                 // Allow Node globals like process, __dirname
+
+    /* ---------- Output Control ---------- */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    /* ---------- Type Safety ---------- */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* ---------- Quality ---------- */
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* ---------- Interop ---------- */
+    "esModuleInterop": true,           // Enables "import express from 'express'"
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+
+  /* ---------- Include & Exclude ---------- */
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
