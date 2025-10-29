@@ -1,16 +1,13 @@
-import express, { Application, Request, Response } from 'express';
+import express from "express";
+import authRoutes from "./routes/authRoutes";
+import donationRoutes from "./routes/donationRoutes";
 
-const app: Application = express();
+const app = express();
 
-// Middleware
 app.use(express.json());
 
 // Routes
-
-
-// Default route
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello from Express + TypeScript!');
-});
+app.use("/auth", authRoutes);
+app.use("/api", donationRoutes);
 
 export default app;
